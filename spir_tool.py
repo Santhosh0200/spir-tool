@@ -2014,4 +2014,9 @@ if __name__ == '__main__':
     print('    FORMAT 5 — Flag SPIR + Multiple Continuation Sheets (.xlsm)\n')
     print('  New Description = Description + Part Number + Supplier (non-empty parts joined)\n')
     threading.Timer(1.2, lambda: webbrowser.open(f'http://localhost:{port}')).start()
-    app.run(port=port, debug=False)
+  
+import os
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5050))
+    app.run(host="0.0.0.0", port=port)
